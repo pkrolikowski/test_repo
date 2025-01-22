@@ -22,7 +22,7 @@ jobs:
               name=$(yq e '.name' "$chart")
               ext_name="$env-$name"
 
-              if [[ ${results[@]} =~ $ext_name ]]; then
+              if [[ " ${results[@]} " =~ " $ext_name " ]]; then
                 echo "$ext_name duplicated"
                 exit 1
               else
