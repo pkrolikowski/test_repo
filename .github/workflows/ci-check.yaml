@@ -25,6 +25,6 @@ jobs:
               if [[ ${results[@]} =~ $ext_name ]]; then
                 echo "$ext_name duplicated"
               else
-                result+=("$env-$name")
+                results+=("$ext_name")
               fi
             done
