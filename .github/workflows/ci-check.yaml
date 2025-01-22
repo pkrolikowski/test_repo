@@ -24,6 +24,7 @@ jobs:
 
               if [[ ${results[@]} =~ $ext_name ]]; then
                 echo "$ext_name duplicated"
+                exit 1
               else
                 results+=("$ext_name")
               fi
