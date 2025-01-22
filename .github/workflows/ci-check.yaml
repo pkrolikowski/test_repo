@@ -14,7 +14,7 @@ jobs:
 
         - name: check uniqueness
           run: |
-            charts=$(find deploy-multi -type -f -path "*/apps/*/Chart.yaml")
+            charts=$(find deploy-multi -type f -path "*/apps/*/Chart.yaml")
             results=()
 
             for chart in $charts; do
