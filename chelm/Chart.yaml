@@ -1,0 +1,5 @@
+apiVersion: v2
+name: pk-app
+description: test app package
+version: 6.6.6
+

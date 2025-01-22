@@ -1,0 +1,29 @@
+name: Check
+
+on:
+  push:
+    branches:
+      - master
+
+  jobs:
+    check:
+      steps:
+        - name: checkout code
+          uses: actions/checkout@v3
+
+        - name: check uniqueness
+          run: |
+            charts=$(find deploy-multi -type -f -path "*/apps/*/Chart.yaml")
+            results=()
+
+            for chart in $charts; do
+              env=$(basename $(dirname $chart))
+              name=$(yq e '.name' "$chart")
+              ext_name="$env-$name"
+
+              if [[ ${results[@]} =~ $ext_name ]]; then
+                echo "$ext_name duplicated"
+              else
+                result+=("$env-$name")
+              fi
+            done

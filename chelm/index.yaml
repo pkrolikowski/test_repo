@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  pk-app:
+  - apiVersion: v2
+    created: "2025-01-15T21:23:30.762205+01:00"
+    description: test app package
+    digest: 19353cb77101628a084d0027177dac0c1685f47d37c25e3d1b5f97421dc02ad4
+    name: pk-app
+    urls:
+    - http://pk-test.com/pk-app-6.6.6.tgz
+    version: 6.6.6
+generated: "2025-01-15T21:23:30.760786+01:00"
