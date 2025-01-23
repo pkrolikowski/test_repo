@@ -14,4 +14,4 @@ jobs:
 
   deploy:
     needs: deployment-name-uniqueness
-    uses: ./.github/workflows/deploy.yml
+    uses: ./.github/workflows/deploy.yaml
