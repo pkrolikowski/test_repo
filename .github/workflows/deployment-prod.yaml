@@ -1,0 +1,17 @@
+name: Prod deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'deploy-multi/**'
+
+jobs:
+  deployment-name-uniqueness:
+    uses: ./.github/workflows/ci-app-name-uniqueness.yaml
+
+
+  deploy:
+    needs: deployment-name-uniqueness
+    uses: ./.github/workflows/deploy.yml
