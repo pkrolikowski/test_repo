@@ -1,0 +1,12 @@
+name: Test
+
+on:
+  push
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Deploy step
+          run: |
+            echo "Hello from TEST step!"
