@@ -2,6 +2,8 @@ name: Check_altered
 
 on:
   push:
+    branches:
+      - '!main'
   workflow_call:
 
 jobs:
