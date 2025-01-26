@@ -8,8 +8,6 @@ for chart in $charts; do
 	name=$(yq e '.name' "$chart")
 	ext_name="$env-$name"
 
-	#echo "${results[@]} => $ext_name"
-
 	if [[ " ${results[@]} " =~ " $ext_name " ]]; then
 		echo "$ext_name duplicated"
 		exit 1
